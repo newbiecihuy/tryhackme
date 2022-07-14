@@ -12,3 +12,19 @@ What domain was logged on crt.sh at 2020-12-26?
 store.tryhackme.com
 
 3. OSINT Search Engines
+What is the TryHackMe subdomain beginning with B discovered using the above Google search?
+ans :blog.tryhackme.com
+
+4. DNS BruteFore
+What is the first subdomain found with the dnsrecon tool?
+ans :api.acmeitsupport.thm
+
+5.OSINT Sublist3r
+What is the first subdomain discovered by sublist3r?
+ans :web55.acmeitsupport.thm
+
+6.Virtual Host
+What is the first subdomain discovered?
+ans: delta
+What is the second subdomain discovered?
+ans: yellow
