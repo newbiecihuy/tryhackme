@@ -1,0 +1,9 @@
+https://tryhackme.com/room/cowboyhacker
+
+Task 1  Living up to the title.
+nmap -sC -sV [Target_IP]
+ftp [Target_IP]
+ls
+
+3. Who wrote the task list? 
+ans : lin
