@@ -1,0 +1,39 @@
+Task 1. Introduction
+No Answer Needed
+
+Task 2. Introduction to Vulnerabilities
+1. An attacker has been able to upgrade the permissions of their system account from "user" to "administrator". What type of vulnerability is this?
+ans : Operating System
+2. You manage to bypass a login panel using cookies to authenticate. What type of vulnerability is this?
+ans : Application Logic
+
+Task 3. Scoring Vulnerabilities (CVSS & VPR)
+1. What year was the first iteration of CVSS published?
+ans : 2005
+2. if you wanted to assess vulnerability based on the risk it poses to an organisation, what framework would you use?
+ Note: We are looking for the acronym here.
+ ans :VPR(Vulnerability Priority Rating)
+3. If you wanted to use a framework that was free and open-source, what framework would that be?
+ Note: We are looking for the acronym here.
+  ans :CVSS(Common Vulnerability Scoring System)
+  
+Task 4. Vulnerability Databases
+1. Using NVD, how many CVEs were submitted in July 2021?
+ans : 
+https://nvd.nist.gov/vuln/full-listing/2021/7
+1585 
+2. Who is the author of Exploit-DB?
+ans :
+https://www.exploit-db.com/
+About The Exploit Database
+Offensive Security
+
+Task 5. An Example of Finding a Vulnerability
+1. What type of vulnerability did we use to find the name and version of the application in this example?
+ans : Version Disclosure
+
+Task 6. Showcase: Exploiting Ackme's Application
+1. Follow along with the showcase of exploiting ACKme's application to the end to retrieve a flag. What is this flag?
+ans : click button view site
+Task 7. Conclusion
+ans : No Answer Needed
