@@ -83,7 +83,6 @@ ans : -T
 ans : Internet
 
 Task 7. WHOIS
-
 1. Perform a whois search on facebook.com
 ans : no answered needed
 2. What is the registrant postal code for facebook.com?
@@ -99,3 +98,20 @@ If you search on Google ‘golf club near Redmond’ and click on the google map
 ans : Bellevue Golf Course
 8. What is the registered Tech Email for microsoft.com?
 ans : msnhst@microsoft.com
+
+Task 8.Networking Tools Dig
+1. What is DNS short for?
+ans : domain name system
+2. What is the first type of DNS server your computer would query when you search for a domain?
+ans :  recursive
+3. What type of DNS server contains records specific to domain extensions (i.e. .com, .co.uk*, etc)*? Use the long version of the name.
+ans :  Top-Level Domain (TLD)
+4.Where is the very first place your computer would look to find the IP address of a domain?
+ans :local cache
+5. [Research] Google runs two public DNS servers. One of them can be queried with the IP 8.8.8.8, what is the IP address of the other one?
+ans : 8.8.4.4
+6. if a DNS query has a TTL of 24 hours, what number would the dig query show?
+ans : 86400
+
+Task 9. Further Reading
+No answer needed.
