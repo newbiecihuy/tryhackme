@@ -1,1 +1,61 @@
 https://tryhackme.com/room/linuxserverforensics
+ Deploy the first VM
+ Apache Log Analysis I
+ 1. Navigate to /var/log/apache2
+ 2. How many different tools made requests to the server?
+ cd /var/log/apache2
+ cat access.log |grep -oi 'nmap\|nikito\|sqlmap\|disbuter' |sort -u
+ ans: 2
+ 3. Name a path requested by Nmap.
+ ans : GET /nmaplowercheck1618912425
+ 
+ Web Server Analysis
+ 1. What page allows users to upload files?
+ acces IP machine using browser
+ ans : contact.php
+ 2. What IP uploaded files to the server?
+ hint : Search the logs for POST requests.
+ cat access.log| grep -i contact.php
+ ans : 192.168.56.24
+ 3. Who left an exposed security notice on the server?
+ hint : DirBuster already located most of the files in the server. Have a look at the access log, and see what it found.
+ cat access.log| grep -i security
+ access IP machine using browser /resources/development/2021/docs/Seurity.md
+ ans : Fred
+ 
+ Persistence Mechanisms I
+ 1. What command and option did the attacker use to establish a backdoor?
+ cat /etc/crontab
+ ans : sh -i
+ 
+ User Accounts 
+ 1.What is the password of the second root account?
+ hint : This attacker has been pretty lazy so far. The hash may have been copied from a forum pos
+ cat /etc/passwd
+ Google search root2 :WVLY0mgH0RtUI
+ ans : mrcake
+ 
+ Deploy the second VM
+ Apache Log Analysis II
+ 1. Name one of the non-standard HTTP Requests
+ hint : Grep searches can be inverted using the -v option to select non-matching lines. Search for GET or POST requests
+ cd /var/log/apache2
+ cat access.log |grep -i 'post\|get'
+ ans : gxwr
+ 2. At what time was the Nmap scan performed? (format: HH:MM:SS)
+ ans : 13:30:15
+ 
+ Persistence Mechanisms II
+ 1. What username and hostname combination can be found in one of the authorized_keys files? (format: username@hostname)
+ hint : You will need to use sudo to view root's authorized_keys file.
+ sudo -i
+ cd .ssh
+ cat authorized_keys
+ ans : kali@kali
+ 
+  Program Execution History
+ 1. What is the first command present in root's bash_history file?
+ hint : Try using sudo su again to read root's .bash_history
+ cd 
+ cat .bash_history  
+ ans : nano /etc/passwd
