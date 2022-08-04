@@ -53,9 +53,20 @@ https://tryhackme.com/room/linuxserverforensics
  cat authorized_keys
  ans : kali@kali
  
-  Program Execution History
+ Program Execution History
  1. What is the first command present in root's bash_history file?
  hint : Try using sudo su again to read root's .bash_history
  cd 
  cat .bash_history  
  ans : nano /etc/passwd
+ 
+ Deploy The Final VM
+ 1. Deploy the final machine and log in to the VM using the provided credentials.
+ Persistence Mechanisms III
+ systemctl --type=service --state=active
+ systemctl status IpManager.service
+ systemctl stop IpManager.service
+ cat /etc/network/ZGtsam5hZG1ua2Fu.sh
+ ans : [gh0st_1n_the_machine]
+
+
