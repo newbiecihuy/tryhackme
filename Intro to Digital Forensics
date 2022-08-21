@@ -1,0 +1,20 @@
+https://tryhackme.com/room/introdigitalforensics
+
+Introduction To Digital Forensics
+1. Consider the desk in the photo above. In addition to the smartphone, camera, and SD cards, what would be interesting for digital forensics?
+ans : laptop
+
+Digital Forensics Process
+1. It is essential to keep track of who is handling it at any point in time to ensure that evidence is admissible in the court of law. What is the name of the documentation that would help establish that?
+ans :  chain of custody
+
+ Practical Example of Digital Forensics
+ 1. Using pdfinfo, find out the author of the attached PDF file.
+ ans : Ann Gree Shepherd
+ 2. Using exiftool or any similar tool, try to find where the kidnappers took the image they attached to their document. What is the name of the street?
+ hint : The GPS coordinates you get from exiftool are 51 deg 30' 51.90" N, 0 deg 5' 38.73" W. Remember to replace deg with ° and remove the space between the number and the ° symbol before searching.
+ search google 51°30'51.9"N 0°05'38.7"W
+ ans :Milk Street
+ 3. What is the model name of the camera used to take this photo?
+ hint : To display only the lines with the word “Camera”, you can use grep: exiftool PHOTO.jpg | grep Camera
+ ans : Canon EOS R6
