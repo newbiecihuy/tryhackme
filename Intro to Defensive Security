@@ -1,0 +1,18 @@
+Intro to Defensive Security
+
+ Introduction to Defensive Security
+ 1. Which team focuses on defensive security?
+ ans : blue team
+ 
+ Areas of Defensive Security
+ 1.What would you call a team of cyber security professionals that monitors a network and its systems for malicious events?
+ hint : SOC
+ ans :Security Operations Center 
+ 2. What does DFIR stand for?
+ ans : Digital Forensics and Incident Response
+ 3. Which kind of malware requires the user to pay money to regain access to their files?
+ ans : Ransomware
+ 
+  Practical Example of Defensive Security
+  1. What is the flag that you obtained by following along?
+  ans : THM{THREAT-BLOCKED}
